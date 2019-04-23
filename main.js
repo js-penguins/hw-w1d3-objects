@@ -29,7 +29,7 @@ var user = {
 
 
 user.email = 'alanazi@email.com';
-
+user.age = user.age++;
 
 
 
@@ -169,8 +169,8 @@ function updateUser (){
   user.age += 1;
   user.name.toUpperCase();
 } 
-  updateUser()
-  console.log(user);
+  // updateUser()
+  // console.log(user);
 
 
 
@@ -181,8 +181,8 @@ function with `user` as the argument. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
 function oldAndLoud(person){
-  user.age += 1;
-  user.name.toUpperCase();
+  person.age += 1;
+  person.name.toUpperCase();
 }
 oldAndLoud();
 console.log(user);
