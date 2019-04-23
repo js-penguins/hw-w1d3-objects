@@ -5,16 +5,38 @@
  */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
-
-
-
-
-
-
-
-/* 
+ var user =  [{
+            name:'hoda',
+            email:'abc@hotmail.com',
+            age:20,
+            loction :[],
+            purchased :[],
+            friend : [{
+              name:'latefah',
+              age:30,
+              location:['ankhlah'],
+              purchased:[]
+            },
+            {name:'sarh',
+            age:28,
+            location:['mdry'],
+            purchased:[]}]
+ },{
+            name:'ahmad',
+            email:'123a@hotmail.com',
+            age:25,
+            loction :[],
+            purchased :[],
+            friend : {
+              name:'fahd',
+              age:28,
+              location:['tmayer'],
+              purchased:[]
+            }
+              }];
+        
+ //console.log(user);
+/*
 ### B. Update the user
 
 1. Our user has changed his or her email address. Without changing the original `user` object, update the `email` value to a new email address.
@@ -24,13 +46,11 @@
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
 
-
-
-
-
-
-
-
+  if (user[0]){
+    user[0].email="cba@hotmail.com";
+    user[0].age++;
+    console.log(user[0]);
+  }
 
 /* ### C. Adding keys and values
 
@@ -40,6 +60,8 @@ You have decided to add your user's location to the data that you want to collec
 */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+console.log(user[0].loction.push('riyadh'));
+console.log(user[0].loction);
 
 
 
@@ -58,7 +80,8 @@ You have decided to add your user's location to the data that you want to collec
 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+user[0].purchased.push('carbohydrates','peace of mind','Merino jodhpurs');
+console.log(user[0].purchased[2]);
 
 
 
@@ -82,7 +105,7 @@ user.friend = {
 
 When we console.log `user`, we would see the `friend` object added to our user object.
 */
-
+console.log(user[0].friend);
 
 /* 1. Write a `friend` object into your `user` object and give the friend a name, age, location, and purchased array (empty for now) */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
@@ -91,32 +114,35 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
 /* 2. Console.log just the friend's name */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+console.log(user[0].friend[0].name);
 
 
 /* 3. Console.log just the friend's location */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+console.log(user[0].friend[0].location);
 
 
 /* 4. CHANGE the friend's age to 55 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+console.log(user[0].friend[0].age=55);
 
 
 /* 5. The `friend` has purchased "The One Ring". Use `.push()` to add "The One Ring" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+user[0].friend[0].purchased.push('The One Ring');
+console.log(user[0].friend[0].purchased);
 
 /* 6. The `friend` has purchased "A latte". Use `.push()` to add "A latte" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+user[0].friend[0].purchased.push('A latte');
 
 
 /* 7. Console.log just "A latte" from the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+console.log(user[0].friend[0].purchased[1]);
 
 
 
@@ -126,15 +152,23 @@ When we console.log `user`, we would see the `friend` object added to our user o
 /* 1. Write a _for loop_ that iterates over the User's `purchased` array (NOT the friend's purchased array), and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+for(var i=0;i<user.length;i++){
+  for(var j=0;j<=user[i].purchased.length;j++){
+      console.log(user[i].purchased[j]);
+  }
+  }
 
 
 /* 2. Write a _for loop_ that iterates over the Friend's `purchased` array, and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
-
+for ( var k=0; k < user.length ;k++){
+  for ( var d =0 ; d < user[k].friend.length ; d++){
+    for ( var f = 0 ; f < user[k].friend[d].purchased.length;f++){
+      console.log(user[k].friend[d].purchased[f]);
+    }
+  }
+}
 
 
 /* ### G. Functions can operate on objects */
@@ -146,7 +180,15 @@ When we console.log `user`, we would see the `friend` object added to our user o
   The function does not need a `return` statement, it will merely modify the user object. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+function updat1(namr , age ){
+  return{
+    age : age ++ ,
+    name : name.toUpperCase()
 
+  }
+}
+var n = updat1( 'hoda' , '5') ;
+console.log(n);
 
 
 
@@ -156,6 +198,7 @@ make it take a parameter `person`, and have it modify the object that is passed 
 function with `user` as the argument. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+
 
 
 
