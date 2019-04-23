@@ -5,7 +5,12 @@
  */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+user = {
+  name: 'wael',
+  email: 'w.@gmail.com',
+  age: 21,
+  purchased : []
+}
 
 
 
@@ -23,7 +28,11 @@
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+user.email = 'Walshehe@gmail.com';
+user.age ++;
+/*
+console.log('New Email : ' + user.email)
+console.log('Happy Birthday you just turned : ' + user.age)
 
 
 
@@ -42,7 +51,9 @@ You have decided to add your user's location to the data that you want to collec
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
 
-
+user.location ='Saudi Arabia';
+/*
+console.log(user.location)
 
 
 
@@ -59,7 +70,9 @@ You have decided to add your user's location to the data that you want to collec
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
 
+user.purchased.push('carbohydrates','peace of mind','Merino jodhpurs' );
 
+console.log(user.purchased[2])
 
 
 
@@ -87,37 +100,45 @@ When we console.log `user`, we would see the `friend` object added to our user o
 /* 1. Write a `friend` object into your `user` object and give the friend a name, age, location, and purchased array (empty for now) */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+user.friend = {
+  name: 'Mark',
+  age: '22',
+  location: 'Riyadh',
+  purchased: []
+}
+/*
+console.log(user)
 
 /* 2. Console.log just the friend's name */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+console.log(user.friend.name);
 
 /* 3. Console.log just the friend's location */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+console.log(user.friend.location);
 
 /* 4. CHANGE the friend's age to 55 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+user.friend.age = 55;
 
 
 /* 5. The `friend` has purchased "The One Ring". Use `.push()` to add "The One Ring" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+user.friend.purchased.push('The One Ring');
 
 /* 6. The `friend` has purchased "A latte". Use `.push()` to add "A latte" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+user.friend.purchased.push('A latte');
 
 
 /* 7. Console.log just "A latte" from the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+console.log(user.friend.purchased[1])
 
 
 
@@ -126,14 +147,18 @@ When we console.log `user`, we would see the `friend` object added to our user o
 /* 1. Write a _for loop_ that iterates over the User's `purchased` array (NOT the friend's purchased array), and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+for (var i = 0; i < user.purchased.length; i++){
+  console.log(user.purchased[i])
+}
 
 
 /* 2. Write a _for loop_ that iterates over the Friend's `purchased` array, and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+for (var i = 0; i < user.friend.purchased.length; i++){
+  console.log(user.friend.purchased[i])
+}
 
 
 
@@ -147,7 +172,11 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+function updateUsr(){
+  user.age++;
+  user.name.toUpperCase();
+}
+updateUsr();
 
 
 
@@ -156,6 +185,30 @@ make it take a parameter `person`, and have it modify the object that is passed 
 function with `user` as the argument. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+//so I didnt want to get the question wrong so I wrote multiple answer to the questions. although you have to comment each answer, they dont
+//work together for some reasson. if you know it please let me know. Thanks :)
 
+/*
+var ageInc = user.age;
+var nameUpperr = user.name;
 
+function oldAndLoud(ageInc,nameUpper){
+  ageInc++;
+ var up= nameUpper.toUpperCase();
+  console.log(ageInc, up)
+}
+oldAndLoud(ageInc,nameUpperr);
+*/
+// the 2nd understanding of the question.
 
+//user.name.toLowercase();
+console.log(user.name)
+var person = user;
+//console.log(person)
+function oldAndLoud(person){
+  person.age++;
+  person.name = person.name.toUpperCase();
+  
+}
+oldAndLoud(person);
+console.log(user.age ,user.name)
