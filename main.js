@@ -4,12 +4,13 @@
 2. Write in to the object the key-value pairs for `name`, `email`, `age`, and `purchased`. Set the value of `purchased` to an empty array `[]`. Set the other values to whatever you would like.
  */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
-
-
-
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+};
+console.log(user);
 
 
 
@@ -21,12 +22,15 @@
 2. Our user has had a birthday! Without changing the original `user` object, increment the `age` value using the postfix operator. Hint: `age++`
 */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
-
-
-
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+};
+user.email = ('Khalid@hotmail.com');
+user.age++;
+console.log(user);
 
 
 
@@ -39,10 +43,17 @@ You have decided to add your user's location to the data that you want to collec
 1. Without changing the original `user` object, add a new key `location` to the object, and give it a value or some-or-other location (a string).
 */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
-
+var location;
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+};
+user.email = ('Khalid@hotmail.com');
+user.age++;
+user.location = ("New York");
+console.log(user);
 
 
 
@@ -56,10 +67,19 @@ You have decided to add your user's location to the data that you want to collec
 3. Our user has purchased an item! They have purchased some "Merino jodhpurs". Using `.push()`, add the string "Merino jodhpurs" to the `purchased` array.
 4. Console.log just the "Merino jodhpurs" from the `purchased` array.
 */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
-
+var location;
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+};
+user.email = ('Khalid@hotmail.com');
+user.age++;
+user.location = ("New York");
+user.purchased.push("carbohydrates", "peace of mind", "Merino jodhpurs");
+console.log(user.purchased[2]);
 
 
 
@@ -85,37 +105,127 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
 
 /* 1. Write a `friend` object into your `user` object and give the friend a name, age, location, and purchased array (empty for now) */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+      friend: {
+      name: "Grace Hopper",
+      age: 85,
+      location: "New York",
+      purchased: [],
+    }
+};
 
 
 
 /* 2. Console.log just the friend's name */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+      friend: {
+      name: "Grace Hopper",
+      age: 85,
+      location: "New York",
+      purchased: [],
+    }
+};
+console.log(user.friend.name);
 
 
 /* 3. Console.log just the friend's location */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+      friend: {
+      name: "Grace Hopper",
+      age: 85,
+      location: "New York",
+      purchased: [],
+    }
+};
+console.log(user.friend.location);
 
 
 
 /* 4. CHANGE the friend's age to 55 */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+      friend: {
+      name: "Grace Hopper",
+      age: 85,
+      location: "New York",
+      purchased: [],
+    }
+};
+user.friend.age=35;
+console.log(user.friend.age);
 
 
 
 /* 5. The `friend` has purchased "The One Ring". Use `.push()` to add "The One Ring" to the friend's `purchased` array. */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+      friend: {
+      name: "Grace Hopper",
+      age: 85,
+      location: "New York",
+      purchased: [],
+    }
+};
+user.friend.purchased.push("The One Ring.");
+
 
 
 
 /* 6. The `friend` has purchased "A latte". Use `.push()` to add "A latte" to the friend's `purchased` array. */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+      friend: {
+      name: "Grace Hopper",
+      age: 85,
+      location: "New York",
+      purchased: [],
+    }
+};
+user.friend.purchased.push("The One Ring.", "A latte");
+
 
 
 
 /* 7. Console.log just "A latte" from the friend's `purchased` array. */
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+var user = {
+  name: 'user',
+  email: 'user@hotmail.com',
+  age: 24,
+  purchased: [],
+      friend: {
+      name: "Grace Hopper",
+      age: 85,
+      location: "New York",
+      purchased: [],
+    }
+};
+user.friend.purchased.push("The One Ring.", "A latte");
+console.log(user.friend.purchased[1]);
 
 
 
@@ -125,13 +235,17 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
 /* 1. Write a _for loop_ that iterates over the User's `purchased` array (NOT the friend's purchased array), and prints each element to the console. */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+for(var i = 0; i <= user.purchased.length; i++){
+  console.loge(user.purchased[i]);
+}
 
 
 
 /* 2. Write a _for loop_ that iterates over the Friend's `purchased` array, and prints each element to the console. */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+for(var i = 0; i <= user.friend.purchased.length; i++){
+  console.loge(user.friend.purchased[i]);
+}
 
 
 
@@ -145,7 +259,11 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
   The function does not need a `return` statement, it will merely modify the user object. */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+  function userUpdate(){
+    user.name.toUpperCase()
+      user.age++;
+  }
+  console.log(user);
 
 
 
@@ -155,7 +273,11 @@ When we console.log `user`, we would see the `friend` object added to our user o
 make it take a parameter `person`, and have it modify the object that is passed in as an argument when the function is called. Call your `oldAndLoud` 
 function with `user` as the argument. */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+function oldAndLoud(){
+  user.name.toUpperCase()
+    user.age++;
+}
+console.log(user);
 
 
 
