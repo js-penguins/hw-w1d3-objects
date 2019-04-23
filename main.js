@@ -7,6 +7,12 @@
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
 
+var user = {
+  name : 'Sara',
+  email: 'sare@gmail.com',
+  age : 26 ,
+  purchased : []
+}
 
 
 
@@ -23,8 +29,11 @@
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+user.email=('sara21@gmail.com');
 
+user.age++ ;
 
+console.log(user);
 
 
 
@@ -42,7 +51,8 @@ You have decided to add your user's location to the data that you want to collec
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
 
-
+user.location= 'Saudi Arabia'
+console.log(user);
 
 
 
@@ -58,7 +68,9 @@ You have decided to add your user's location to the data that you want to collec
 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+user.purchased.push('carbohydrates', 'peace of mind','Merino jodhpurs');
 
+console.log(user.purchased[2]);
 
 
 
@@ -87,37 +99,43 @@ When we console.log `user`, we would see the `friend` object added to our user o
 /* 1. Write a `friend` object into your `user` object and give the friend a name, age, location, and purchased array (empty for now) */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+user.friend = {
+  name: 'Noura',
+  age: 29,
+  location: 'Riyadh',
+  purchased: []
+}
+console.log(user);
 
 /* 2. Console.log just the friend's name */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+console.log(user.friend.name);
 
 
 /* 3. Console.log just the friend's location */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+console.log(user.friend.location);
 
 /* 4. CHANGE the friend's age to 55 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+user.friend.age= 55;
+console.log(user.friend.age);
 
 
 /* 5. The `friend` has purchased "The One Ring". Use `.push()` to add "The One Ring" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+ user.friend.purchased.push('The One Ring');
 
 
 /* 6. The `friend` has purchased "A latte". Use `.push()` to add "A latte" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+user.friend.purchased.push('A latte');
 
 
 /* 7. Console.log just "A latte" from the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
+console.log(user.friend.purchased[1]);
 
 
 
@@ -126,12 +144,18 @@ When we console.log `user`, we would see the `friend` object added to our user o
 /* 1. Write a _for loop_ that iterates over the User's `purchased` array (NOT the friend's purchased array), and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+for (var i=0 ; i< user.purchased.length ; i++){
 
+  console.log(user.purchased[i]);
+}
 
 
 /* 2. Write a _for loop_ that iterates over the Friend's `purchased` array, and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+for (var i=0 ; i< user.friend.purchased.length ; i++){
+  console.log(user.friend.purchased[i]);
+}
 
 
 
@@ -146,9 +170,12 @@ When we console.log `user`, we would see the `friend` object added to our user o
   The function does not need a `return` statement, it will merely modify the user object. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+function updateUser (){
+  user.age++ ;
+  user.name.toUpperCase();
+}
 
-
-
+updateUser();
 
 
 /* 2. Write a function `oldAndLoud` that performs the exact same tasks as `updateUser`, but instead of hard-coding it to only work on our `user` object, 
@@ -157,5 +184,9 @@ function with `user` as the argument. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+function oldAndLoud (person){
+  user.age++ ;
+  user.name.toUpperCase(); 
+}
 
-
+oldAndLoud('Sara');
