@@ -6,6 +6,18 @@
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+// going to write a user factory incase I need to create more users in the future.
+
+function userFactory(name, email, age, purchased) {
+  return {
+    name: name,
+    email: email,
+    age: age,
+    purchased: purchased
+  }
+}
+
+var user = userFactory('haithem albetairi', 'haithem.t.albetairi@gmail.com', 26, []);
 
 
 
@@ -22,6 +34,8 @@
 */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+user.email = 'haithem.albetairi@live.com';
+user.age++;
 
 
 
@@ -40,8 +54,7 @@ You have decided to add your user's location to the data that you want to collec
 */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
+user.location = 'riyadh';
 
 
 
@@ -57,7 +70,11 @@ You have decided to add your user's location to the data that you want to collec
 4. Console.log just the "Merino jodhpurs" from the `purchased` array.
 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+user.purchased.push('carbohydrates');
+user.purchased.push('peace of mind');
+user.purchased.push('Merino jodhpurs');
 
+console.log(user.purchased[2]);
 
 
 
@@ -86,38 +103,47 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
 /* 1. Write a `friend` object into your `user` object and give the friend a name, age, location, and purchased array (empty for now) */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+var friend = userFactory('faisal musa', 'faisal.mm@live.com', 27, []);
+friend.location = 'dubai';
+user.friend = friend;
 
 
 /* 2. Console.log just the friend's name */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+console.log(friend.name);
 
 
 /* 3. Console.log just the friend's location */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+console.log(friend.location);
 
 
 /* 4. CHANGE the friend's age to 55 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+// I take a space ship and travel at the speed of light. When I return to earth, my friend is suddenly old and gray ='(
+friend.age = 55;
 
 /* 5. The `friend` has purchased "The One Ring". Use `.push()` to add "The One Ring" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+// One Ring to rule them all, One Ring to find them,
+// One Ring to bring them all, and in the darkness bind them.
 
+// After binge-watching The Lord of the Rings trilogy, Faisal goes to my website and purchases a replica of The One Ring.
+friend.purchased.push('The One Ring');
 
 /* 6. The `friend` has purchased "A latte". Use `.push()` to add "A latte" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+friend.purchased.push('A latte');
 
 
 /* 7. Console.log just "A latte" from the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+console.log(friend.purchased[1]);
 
-
+// this works too, what? JS is awesome.
+// console.log(user.friend.purchased[1]);
 
 
 
@@ -126,13 +152,17 @@ When we console.log `user`, we would see the `friend` object added to our user o
 /* 1. Write a _for loop_ that iterates over the User's `purchased` array (NOT the friend's purchased array), and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+for(var i = 0; i < user.purchased.length; i++) {
+  console.log(user.purchased[i]);
+}
 
 
 /* 2. Write a _for loop_ that iterates over the Friend's `purchased` array, and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
+for(var i = 0; i < friend.purchased.length; i++) {
+  console.log(friend.purchased[i]);
+}
 
 
 
@@ -146,9 +176,10 @@ When we console.log `user`, we would see the `friend` object added to our user o
   The function does not need a `return` statement, it will merely modify the user object. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
-
-
-
+function updateUser() {
+  user.age++;
+  user.name = user.name.toUpperCase();
+}
 
 
 /* 2. Write a function `oldAndLoud` that performs the exact same tasks as `updateUser`, but instead of hard-coding it to only work on our `user` object, 
@@ -156,6 +187,12 @@ make it take a parameter `person`, and have it modify the object that is passed 
 function with `user` as the argument. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+function oldAndLoud(person) {
+  person.age++;
+  person.name = person.name.toUpperCase();
+}
 
+oldAndLoud(user);
+console.log(user);
 
 
