@@ -6,7 +6,7 @@
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-// going to write a user factory incase I need to create more users in the future.
+// going to write a user factory in case I need to create more users in the future.
 
 function userFactory(name, email, age, purchased) {
   return {
