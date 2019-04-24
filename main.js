@@ -28,9 +28,8 @@ var user = {
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+user.age++;
 user.email = 'mees_af@hotmail.com';
-
 
 
 
