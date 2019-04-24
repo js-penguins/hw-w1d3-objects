@@ -6,11 +6,12 @@
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
-
-
-
-
+var user = { 
+  name:"John", 
+  email: "Jon@hotmail.com", 
+  age:20, 
+  purchase:[] 
+  }
 
 
 
@@ -23,6 +24,9 @@
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+var updateUser = user; 
+updateUser.email="John49@gmail.com"; // update email 
+updateUser.age=updateUser.age++; // increment the age value using postfix operato
 
 
 
@@ -42,7 +46,8 @@ You have decided to add your user's location to the data that you want to collec
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
 
-
+var addUserKeyValues = user; 
+addUserKeyValues.location="Riyadh-KSA" // add key location and assign it's value
 
 
 
@@ -60,7 +65,15 @@ You have decided to add your user's location to the data that you want to collec
 
 
 
+var purchasedArray = user.purchase; 
+purchasedArray.push("carbohydrates"); // add carbohydrates 
+purchasedArray.push("peace of mind"); // add peace of mind 
+purchasedArray.push("Merino jodhpurs"); // add Merino jodhpurs 
 
+var lastItem = purchasedArray[purchasedArray.length-1]; // get Merino jodhpurs (last item in array) 
+console.log(lastItem); // print lastItem In console log 
+
+user.purchase = purchasedArray; // update user purchase array with new values
 
 
 
@@ -87,37 +100,43 @@ When we console.log `user`, we would see the `friend` object added to our user o
 /* 1. Write a `friend` object into your `user` object and give the friend a name, age, location, and purchased array (empty for now) */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+// create friend object with data 
+var userFriend={ 
+  name:"Grace Hopper", 
+  age:85, 
+  location:"London-England", 
+  purchased:[] 
+  } 
 
 /* 2. Console.log just the friend's name */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+console.log(userFriend.name);
 
 /* 3. Console.log just the friend's location */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+console.log(location);
 
 /* 4. CHANGE the friend's age to 55 */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+userFriend.age=55;
 
 /* 5. The `friend` has purchased "The One Ring". Use `.push()` to add "The One Ring" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+var friendPurchasedArray = userFriend.purchase;
 
 /* 6. The `friend` has purchased "A latte". Use `.push()` to add "A latte" to the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+friendPurchasedArray.push("A latte");
 
 /* 7. Console.log just "A latte" from the friend's `purchased` array. */
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+console.log(lastArrayItem);
 
 
 
@@ -125,15 +144,23 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
 /* 1. Write a _for loop_ that iterates over the User's `purchased` array (NOT the friend's purchased array), and prints each element to the console. */
 
-// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
+// ~~~~~~~ your solution here: ~~~~~~~~~~~~~
+var UserPurchasedArray = user.purchase;
+UserPurchasedArray.forEach(userPrintArrauItemFunction);
+function userPrintArrauItemFunction(value) { 
+  console.log(value); 
+  } 
 
 
 /* 2. Write a _for loop_ that iterates over the Friend's `purchased` array, and prints each element to the console. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+var friendPurchasedArray = userFriend.purchase;
+friendPurchasedArray.forEach(friendPrintArrauItemFunction);
+function friendPrintArrauItemFunction(value) {
+console.log(value);
 
 
 
@@ -147,8 +174,10 @@ When we console.log `user`, we would see the `friend` object added to our user o
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
-
+var updateUserObj = user; 
+updateUserObj.name="JOHN";
+updateUserObj.age=updateUserObj.age + 1;
+} 
 
 
 /* 2. Write a function `oldAndLoud` that performs the exact same tasks as `updateUser`, but instead of hard-coding it to only work on our `user` object, 
@@ -157,5 +186,11 @@ function with `user` as the argument. */
 
 // ~~~~~~~ your solution here: ~~~~~~~~~~~~~
 
-
+  {
+    var updateUserObj = user; 
+  updateUserObj.name==nameParm; 
+  updateUserObj.age=ageParm; 
+  } 
+  
+  var callFun = oldAndLoud("AHMED", 50);
 
